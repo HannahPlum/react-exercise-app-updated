@@ -1,0 +1,35 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/*sets the width of the container holding the buttons to 400px*/
+#container {
+  max-width: 400px;
+}
+
+/*sets a margin for my buttons*/
+.exerciseButton {
+  margin: 10px;
+  display: inline-block;
+}
+
+/*styles my buttons so they match my design in Figma*/
+button {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #FFFAEC;
+  color: #061B78;
+  cursor: pointer;
+  border-radius: 10px;
+  border-top: none;
+  border-left: none;
+  border-right: 5px solid #061B78;
+  border-bottom: 5px solid #061B78;
+  width: 360px;
+  height: 80px;
+  flex-shrink: 0;
+}
