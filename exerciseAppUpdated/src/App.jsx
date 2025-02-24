@@ -9,6 +9,8 @@ import RepetitionExercise from "./components/RepetitionExercise";
 
 import DurationExercise from "./components/DurationExercise";
 
+import RunningExercise from "./components/RunningExercise";
+
 function App() {
   const [selectedExercise, setSelectedExercise] = useState(null);
 
@@ -62,12 +64,23 @@ function App() {
           <RepetitionExercise name={selectedExercise.name} />
         </div>
       )}
-      {selectedExercise && selectedExercise.type === "duration" && (
-        <div>
-          <h1>{selectedExercise.name}</h1>
-          <DurationExercise name={selectedExercise.name} />
-        </div>
-      )}
+
+      {selectedExercise &&
+        selectedExercise.type === "duration" &&
+        selectedExercise.name !== "Running" && (
+          <div>
+            <h1>{selectedExercise.name}</h1>
+            <DurationExercise name={selectedExercise.name} />
+          </div>
+        )}
+
+      {selectedExercise &&
+        selectedExercise.name === "Running" &&
+        selectedExercise.type === "duration" && (
+          <div>
+            <RunningExercise />
+          </div>
+        )}
     </div>
   );
 }

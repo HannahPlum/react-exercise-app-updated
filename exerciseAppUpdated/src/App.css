@@ -4,6 +4,11 @@
   text-align: center;
 }
 
+/*makes sure the laps don't have bullet points*/
+ul {
+  list-style: none;
+}
+
 /*sets the width of the container holding the buttons to 400px*/
 #container {
   max-width: 400px;
