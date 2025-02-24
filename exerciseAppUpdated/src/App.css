@@ -20,6 +20,27 @@ ul {
   display: inline-block;
 }
 
+.backButton {
+  margin: 10px;
+  margin-right: 220px;
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #FFFAEC;
+  color: #061B78;
+  cursor: pointer;
+  border-radius: 10px;
+  border-top: none;
+  border-left: none;
+  border-right: 5px solid #061B78;
+  border-bottom: 5px solid #061B78;
+  width: 150px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
 /*styles my buttons so they match my design in Figma*/
 button {
   padding: 0.6em 1.2em;

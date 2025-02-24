@@ -19,6 +19,10 @@ function App() {
     setSelectedExercise(exercise);
   };
 
+  const handleBack = () => {
+    setSelectedExercise(null);
+  };
+
   //this renders the main user-interface that shows the exercise buttons if no exercise is selected yet. Eeach button is outfitted with an on click event handler that calls the handle exercise function
   return (
     <div id="container">
@@ -57,6 +61,15 @@ function App() {
       )}
 
       {/*this is rendered conditionally depending on whether the exercise has been selected or not, the name prop is passed in as well */}
+
+      {selectedExercise && (
+        <div>
+          {/* Back button added to return to exercise selection*/}
+          <button className="backButton" onClick={handleBack}>
+            Back
+          </button>
+        </div>
+      )}
 
       {selectedExercise && selectedExercise.type === "repetition" && (
         <div>
